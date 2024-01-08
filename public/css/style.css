@@ -1,0 +1,27 @@
+p{
+    margin: 10px 0 !important;
+}
+
+.login-container{
+    width: 400px;
+    margin-top: 50px;
+    text-align: center;
+    
+    
+}
+
+.main-login-container{
+    background-image: url("../images/background.jpeg");
+}
+
+i.logo{
+    margin: 10px;
+    color: #1DD300;
+}
+
+.login-card{
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(4.1px);
+    -webkit-backdrop-filter: blur(4.1px);
+}

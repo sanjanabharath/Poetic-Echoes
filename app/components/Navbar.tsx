@@ -5,7 +5,7 @@ const Navbar = () => {
   return (
     <div>
         <h3 className='font-extrabold'>DevBlogs</h3>
-        <Button variant="outlined">Outlined</Button>
+        <Button variant="outlined">Post</Button>
     </div>
   )
 }

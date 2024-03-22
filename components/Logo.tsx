@@ -16,7 +16,9 @@ const Logo = () => {
           alt={"logo"}
           style={{ width: "30px", margin: "auto 10px" }}
         />
-        <Typography variant={"h5"}>Poetic Echoes</Typography>
+        <Typography variant={"h5"} style={{ fontWeight: "bolder" }}>
+          Poetic Echoes
+        </Typography>
       </div>
     </div>
   );

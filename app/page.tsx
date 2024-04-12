@@ -1,5 +1,6 @@
 import { Button, Typography } from "@mui/material";
 import Main from "@/components/Main";
+import Buttons from "@/components/Home/Buttons";
 
 export default function Home() {
   return (
@@ -11,21 +12,7 @@ export default function Home() {
         <Typography variant="h4" component="h2">
           Poetic Echoes
         </Typography>
-        <div>
-          <Button variant="text" style={{ color: "black" }} className="mx-4">
-            Sign In
-          </Button>
-          <Button
-            variant="contained"
-            style={{
-              backgroundColor: "black",
-              color: "white",
-              borderRadius: "20px",
-            }}
-          >
-            Get Started
-          </Button>
-        </div>
+        <Buttons />
       </div>
       <Main />
     </div>

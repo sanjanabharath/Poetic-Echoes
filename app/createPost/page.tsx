@@ -19,15 +19,12 @@ const Post = () => {
         />
       </div>
       <div style={{ display: "flex", justifyContent: "center" }}>
-        <TextField
-          InputProps={{ sx: { height: 300 } }}
-          id="outlined-multiline-static"
-          label="Title"
-          multiline
-          style={{ marginTop: "40px", width: "40%", height: "180" }}
-        />
+        <input className="w-4/12" />
       </div>
-      <div style={{ paddingLeft: "30%", marginTop: "14px" }}>
+      <div
+        style={{ paddingLeft: "30%", marginTop: "14px" }}
+        className="space-x-2.5"
+      >
         <Buttons />
       </div>
     </div>

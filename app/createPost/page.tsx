@@ -11,15 +11,16 @@ const Post = () => {
       </div>
 
       <div style={{ display: "flex", justifyContent: "center" }}>
-        <TextField
-          id="outlined-multiline-static"
-          label="Title"
-          multiline
-          style={{ width: "40%" }}
+        <input
+          className="w-4/12 bg-transparent border border-slate-400"
+          placeholder="Write Your Title"
         />
       </div>
       <div style={{ display: "flex", justifyContent: "center" }}>
-        <input className="w-4/12" />
+        <input
+          className="w-5/12 bg-transparent border border-slate-400 h-[400px]"
+          placeholder="Write Your Poem"
+        />
       </div>
       <div
         style={{ paddingLeft: "30%", marginTop: "14px" }}

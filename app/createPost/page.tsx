@@ -11,15 +11,15 @@ const Post = () => {
       </div>
 
       <div style={{ display: "flex", justifyContent: "center" }}>
-        <input
-          className="w-4/12 bg-transparent border border-slate-400 rounded"
-          placeholder="Write Your Title"
+        <textarea
+          placeholder="Write a title of the poem"
+          className="h-[50px] w-5/12 bg-transparent border border-slate-400 rounded p-3 mb-4"
         />
       </div>
       <div style={{ display: "flex", justifyContent: "center" }}>
-        <input
-          className="w-5/12 bg-transparent border border-slate-400 h-[400px] rounded"
-          placeholder="Write Your Poem"
+        <textarea
+          placeholder="Write a Poem"
+          className="h-[400px] w-5/12 bg-transparent border border-slate-400 rounded p-4"
         />
       </div>
       <div

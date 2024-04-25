@@ -30,7 +30,7 @@ const Buttons = () => {
         style={{ borderColor: "black", color: "black" }}
         onClick={() => route.push("/blogs")}
       >
-        Cancel
+        Back
       </Button>
     </div>
   );

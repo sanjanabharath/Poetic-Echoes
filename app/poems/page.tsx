@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import { Button, Avatar } from "@mui/material";
 import EditNoteIcon from "@mui/icons-material/EditNote";
@@ -5,7 +7,9 @@ import Search from "@/components/Search";
 import Logo from "@/components/Logo";
 import { IoIosNotifications } from "react-icons/io";
 import Posts from "@/components/Posts";
+import { useRouter } from "next/navigation";
 const Blogs = () => {
+  const router = useRouter();
   return (
     <div>
       <div
@@ -24,8 +28,9 @@ const Blogs = () => {
             variant="contained"
             startIcon={<EditNoteIcon />}
             style={{ backgroundColor: "black", color: "white" }}
+            onClick={() => router.push("/createPost")}
           >
-            Send
+            Write
           </Button>
           <IoIosNotifications
             size={30}

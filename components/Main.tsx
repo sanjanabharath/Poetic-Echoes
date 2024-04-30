@@ -1,6 +1,8 @@
+"use client";
 import React from "react";
 import Image from "next/image";
 import { Button, Typography } from "@mui/material";
+import { signIn } from "next-auth/react";
 
 const Main = () => {
   return (
@@ -25,11 +27,12 @@ const Main = () => {
             color: "white",
             borderRadius: "20px",
           }}
+          onClick={() => signIn()}
         >
           Start Writing
         </Button>
       </div>
-      <Image src="/main.gif" width={600} height={600} alt="main" />
+      <Image src="/main-bird.jpeg" width={600} height={600} alt="main" />
     </div>
   );
 };

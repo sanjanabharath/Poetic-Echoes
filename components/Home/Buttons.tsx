@@ -3,9 +3,11 @@
 import React from "react";
 import { useRouter } from "next/navigation";
 import { Button } from "@mui/material";
+import { useSession } from "next-auth/react";
 
 const Buttons = () => {
   const route = useRouter();
+  const session = useSession();
   return (
     <div>
       <Button

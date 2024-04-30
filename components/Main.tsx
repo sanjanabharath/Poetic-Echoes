@@ -2,12 +2,14 @@
 import React from "react";
 import Image from "next/image";
 import { Button, Typography } from "@mui/material";
-import { signIn } from "next-auth/react";
+import { signIn, useSession } from "next-auth/react";
 
 const Main = () => {
+  const session = useSession();
   return (
     <div className="flex justify-between p-16">
       <div className="m-20">
+        {session && <div>{JSON.stringify(session.data)}</div>}
         <Typography variant="h2" component="h2">
           Turn your Soul into Verse
         </Typography>

@@ -3,7 +3,7 @@
 import React from "react";
 import { useRouter } from "next/navigation";
 import { Button } from "@mui/material";
-import { useSession } from "next-auth/react";
+import { signOut, useSession } from "next-auth/react";
 
 const Buttons = () => {
   const route = useRouter();
@@ -35,7 +35,20 @@ const Buttons = () => {
       ) : (
         <div>
           {session.data?.user && (
-            <div>Welcome {JSON.stringify(session.data?.user.email)}</div>
+            <div>
+              Welcome {JSON.stringify(session.data?.user.email)}{" "}
+              <Button
+                onClick={() => signOut()}
+                variant="contained"
+                style={{
+                  backgroundColor: "black",
+                  color: "white",
+                  borderRadius: "20px",
+                }}
+              >
+                Logout
+              </Button>
+            </div>
           )}
         </div>
       )}

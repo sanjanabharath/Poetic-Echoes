@@ -1,4 +1,10 @@
+"use client";
+
+import { signIn } from "next-auth/react";
+import { useRouter } from "next/navigation";
+
 export default function () {
+  const router = useRouter();
   return (
     <div className="h-screen flex justify-center flex-col">
       <div className="flex justify-between">
@@ -23,6 +29,15 @@ export default function () {
                 />
                 <button
                   type="button"
+                  onClick={async () => {
+                    const res = await signIn("credentials", {
+                      username: "",
+                      password: "",
+                      redirect: false,
+                    });
+                    console.log(res);
+                    router.push("/");
+                  }}
                   className="mt-8 w-full text-white bg-gray-800 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2"
                 >
                   Sign in

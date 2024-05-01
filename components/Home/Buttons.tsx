@@ -3,25 +3,25 @@
 import React from "react";
 import { useRouter } from "next/navigation";
 import { Button } from "@mui/material";
-import { signOut, useSession } from "next-auth/react";
+import { signIn, signOut, useSession } from "next-auth/react";
 
 const Buttons = () => {
-  const route = useRouter();
+  const router = useRouter();
   const session = useSession();
   return (
     <div>
       {session.data?.user == null ? (
         <div>
           <Button
-            onClick={() => route.push("/signin")}
-            variant="text"
-            style={{ color: "black" }}
-            className="mx-4"
-          >
-            Sign In
-          </Button>
-          <Button
-            onClick={() => route.push("/signup")}
+            onClick={async () => {
+              const res = await signIn("credentials", {
+                username: "",
+                password: "",
+                redirect: false,
+              });
+              console.log(res);
+              router.push("/poems");
+            }}
             variant="contained"
             style={{
               backgroundColor: "black",

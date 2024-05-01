@@ -2,6 +2,7 @@
 
 import { signIn } from "next-auth/react";
 import { useRouter } from "next/navigation";
+import { FcGoogle } from "react-icons/fc";
 
 export default function () {
   const router = useRouter();
@@ -41,6 +42,33 @@ export default function () {
                   className="mt-8 w-full text-white bg-gray-800 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2"
                 >
                   Sign in
+                </button>
+                <div className="flex items-center">
+                  <div
+                    style={{
+                      height: "1px",
+                      flex: "1",
+                      backgroundColor: "#6E6E6E",
+                    }}
+                  ></div>
+                  or
+                  <div
+                    style={{
+                      height: "1px",
+                      flex: "1",
+                      backgroundColor: "#6E6E6E",
+                    }}
+                  ></div>
+                </div>
+                <button className="mt-8 w-full text-white bg-gray-800 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2">
+                  <div
+                    className=""
+                    onClick={async () => {
+                      await signIn("google");
+                    }}
+                  >
+                    Login With Google
+                  </div>
                 </button>
               </div>
             </div>

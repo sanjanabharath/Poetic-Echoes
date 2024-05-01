@@ -9,7 +9,6 @@ const Main = () => {
   return (
     <div className="flex justify-between p-16">
       <div className="m-20">
-        {session && <div>{JSON.stringify(session.data)}</div>}
         <Typography variant="h2" component="h2">
           Turn your Soul into Verse
         </Typography>

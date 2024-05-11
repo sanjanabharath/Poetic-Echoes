@@ -28,7 +28,7 @@ const Buttons = () => {
       <Button
         variant="outlined"
         style={{ borderColor: "black", color: "black" }}
-        onClick={() => route.push("/blogs")}
+        onClick={() => route.push("/poems")}
       >
         Back
       </Button>
